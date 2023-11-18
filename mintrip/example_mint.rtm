@@ -1,0 +1,21 @@
+# CALL_METHOD
+#     Address("account_tdx_2_129f3avaxc24z6ycnf4n07ehljd7a83xrdpuxs40tkdk84lveh0st9k")
+#     "create_proof_of_non_fungibles"
+#     Address("resource_tdx_2_1n22tppr3v2wrc5alezd9v4efh927hkcr9h58zg3agnprk04dl57hzp")
+#     Array<NonFungibleLocalId>(NonFungibleLocalId("<Rippy_Lord>"));
+
+CALL_METHOD
+Address("account_sim1c956qr3kxlgypxwst89j9yf24tjc7zxd4up38x37zr6q4jxdx9rhma")
+"lock_fee"
+Decimal("100");
+
+CALL_METHOD 
+Address("component_sim1cpwu4wc6rg0am8l9prnh2lzqkk6hue6stzqhdx48rzvek2mmm5vp0p") 
+"minty" 
+Array<String>("Pool Tiles" , "Rippy Clip" , "Sad Brows" , "Radix Earing" , "Oci Eyes" , "White Podium" , "Regular" , "Averip" , "https://rippyclip.com/0001.webp" , "https://rippyclip.com/0001.webp" , "0001");
+
+
+CALL_METHOD 
+Address("account_sim1c956qr3kxlgypxwst89j9yf24tjc7zxd4up38x37zr6q4jxdx9rhma")
+"deposit_batch"
+Expression("ENTIRE_WORKTOP");
