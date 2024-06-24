@@ -12,7 +12,7 @@ mod bootstrap {
     impl Bootstrap {
         // Creates a number of NFT collections used for testing of the NFT marketplace blueprints.
         pub fn bootstrap() -> (Global<Bootstrap>, NonFungibleBucket) {
-            let (address_reservation, _component_address) =
+            let (address_reservation, component_address) =
                 Runtime::allocate_component_address(Bootstrap::blueprint_id());
 
             // This mints an admin badge that means only the holder can mint NFTs/update metadata/lock minting etc.
@@ -49,7 +49,7 @@ mod bootstrap {
                     }
                 ))
                 .mint_roles(mint_roles!(
-                   minter => rule!(require(admin.resource_address()));
+                   minter => rule!(require(global_caller(component_address));
                    minter_updater => rule!(require(admin.resource_address()));
                 ))
                 .non_fungible_data_update_roles(non_fungible_data_update_roles!(
